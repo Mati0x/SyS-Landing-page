@@ -15,6 +15,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
     <!-- Define your gradient here - use online tools to find a gradient matching your branding-->
     <style>
+      html {
+  scroll-behavior: smooth;
+}
      .gradient {
   background: linear-gradient(to right, #020617, #0f172a, #020617);
    
@@ -45,11 +48,11 @@
             </svg>
           </button>
         </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-gray-900 lg:bg-transparent text-black p-4 lg:p-0 z-20" id="nav-content">
           <ul class="list-reset lg:flex justify-end flex-1 items-center">
-            <li class="mr-3"><a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#about">Quiénes Somos</a></li>
-            <li class="mr-3"><a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#services">Nuestros Djs</a></li>
-            <li class="mr-3"><a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#contact">Contacto</a></li>
+            <li class="mr-3"><a class="change inline-block py-2 px-4 text-white font-bold no-underline" href="#about">Quiénes Somos</a></li>
+            <li class="mr-3"><a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#services">Nuestros Djs</a></li>
+            <li class="mr-3"><a class="inline-block text-white no-underline hover:text-gray-800 hover:text-underline py-2 px-4" href="#contact">Contacto</a></li>
           </ul>
      
         </div>
@@ -64,7 +67,8 @@
           <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
             <p class="uppercase tracking-loose w-full">Transformamos música en experiencias</p>
             <h1 class="my-4 text-5xl font-bold leading-tight">Más que una agencia, creadores de momentos inolvidables.</h1>
-            <p class="leading-normal text-2xl mb-8">En D & S Management conectamos talento, eventos y pasión por la música en vivo. ¡Descubre lo que podemos hacer juntos!!</p>
+            <p class="leading-normal text-2xl mb-8">D & S es una agencia de servicios globales con 3 años de experiencia en la industria musical especializados exclusivamente en el management y booking de djs.
+            </p>
             <!-- <a href="#services" class="mx-auto lg:mx-0 bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
               Explorar Servicios
             </a> -->
@@ -94,7 +98,7 @@
         </g>
       </svg>
     </div>
-    <section class="bg-white border-b py-8">
+    <section id="about" class="bg-white border-b py-8">
       <div class="container max-w-5xl mx-auto m-8">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Quiene Somos
@@ -138,7 +142,7 @@ Nuestra Mision              </h3>
         </div>
       </div>
     </section>
-    <section class="bg-white border-b py-8">
+    <section id="services" class="bg-white border-b py-8">
       <div class="container mx-auto flex flex-wrap pt-4 pb-12">
         <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Nuestros DJs
@@ -319,7 +323,7 @@ Nuestra Mision              </h3>
         </g>
       </g>
     </svg>
-    <section class="container mx-auto text-center py-6 mb-12">
+    <section id="contact" class="container mx-auto text-center py-6 mb-12">
       <h2 class="w-full my-2 text-5xl font-bold leading-tight text-center text-white">
         Únete a nosotros
 
@@ -386,11 +390,12 @@ Nuestra Mision              </h3>
         scrollpos = window.scrollY;
 
         if (scrollpos > 10) {
-          header.classList.add("bg-white");
+          header.classList.add("bg-gray-900");
           navaction.classList.remove("bg-white");
           navaction.classList.add("gradient");
           navaction.classList.remove("text-gray-800");
           navaction.classList.add("text-white");
+        
           //Use to switch toggleColour colours
           for (var i = 0; i < toToggle.length; i++) {
             toToggle[i].classList.add("text-gray-800");
